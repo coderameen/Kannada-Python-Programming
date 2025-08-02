@@ -104,3 +104,21 @@ def myfunc(a,b,c=100):
 res = myfunc(10,10)
 print(res)
 
+
+
+
+def greet(*args):
+    # print(args)
+    for name in args:
+        print(f"Hello {name}")
+
+greet("Ameen","Prajwal","Sanaan")
+
+
+def person_info(**kwargs):
+    name = kwargs.get("name")
+    age = kwargs.get("age")
+    print(f"The name is {name} and The age is {age}")
+    
+person_info(name = "Mohan", age=54)
+
