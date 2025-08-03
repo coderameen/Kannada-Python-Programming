@@ -2,21 +2,27 @@
 myl = []
 myl = list()
 
+#nested list
+nested_list = [[1,2],
+               [3,4]]
+
 #List is a collection of mixed data enclosed within a square brackets.
 l = [10,20,'a','b',"vineet",9.56,(10,20),[11,22],{10,56},{"name":"alen","age":25}]
 # print(type(l))
 print(len(l))
 # print(l[-1].get('age'))
 
-print("---")
-for ele in l:
-    if isinstance(ele, dict):
-        if "age" in ele:
-            print(ele['age'])
+#sum(), min(),max()
+l= [10,20,30]
+print(sum(l))
+print(min(l))
+print(max(l))
+
+
 
 
 l2 = [11,22,33,44,55,66]
-#indexing
+#Accessing element in list/indexing
 print(l2[0])
 print(l2[-1])
 print(l2[1:4])#slicing
@@ -41,12 +47,6 @@ print('mango' in fruits)
 print('apple' not in fruits)
 
 
-#min, max,sum
-l = [21,53,21,3,6,]
-print(min(l))
-
-
-
 #Insert element in list
 '''
 1.append(ele)
@@ -61,7 +61,6 @@ myl.insert(1,15)
 l5 = [11,22]
 myl.extend(l5)
 print(myl)
-
 
 print("----------Remove-----------")
 #Remove
@@ -140,3 +139,13 @@ print("".join(myl))
 
 res= [ch for ch in "coder ameen" if ch in "aeiou"]
 print(res)
+
+#create list containing the table of 5
+#[5,10,15,......50]
+table = []
+for i in range(1,11):
+    table.append(i*5)
+print(table)
+
+#shorthand
+table = [i*5 for i in range(1,11)]
