@@ -1,3 +1,32 @@
+meglobal_v = "This is global variable"
+
+class MyClass:
+    meclass_v = "This is class variable"
+    def __init__(self):
+        self.meinstance_v = "This is instance variable"
+    
+    def myfunc(self):
+        melocal_v = "This is local variable"
+        print(melocal_v)
+        
+        
+
+print(meglobal_v)
+obj = MyClass()
+print(obj.meclass_v)
+print(obj.meinstance_v)
+obj.myfunc()
+
+n = 10
+def func1():
+    n = 100
+    print(globals()['n'])
+func1()
+
+
+
+
+
 # Global Variable
 company_name = "TechCorp"
 
@@ -16,3 +45,5 @@ class Employee:
         print("Company:", company_name)  # Global variable used here
 emp1 = Employee("Ameen", 25)
 emp1.show_details()
+
+
