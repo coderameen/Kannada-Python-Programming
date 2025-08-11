@@ -10,11 +10,21 @@ if match:
     
 else:
     print("match not found!")
+
+text = "I have 12 apples and 3 bananas"
+result = re.search(r"\d+", text)
+print(result.group()) 
+
+
     
     
 print("-----------Find all-------")
 matches = re.findall("Python", text, re.IGNORECASE)#Case-insensitive search
 print(matches)
+
+
+result = re.findall(r"\d+", text)
+print(result)  # Output: ['12', '3']
 
 #----------------
 new_text = re.sub("Python","Java",text)
